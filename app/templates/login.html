@@ -1,0 +1,37 @@
+{% extends "layout.html" %} {% block title %}Login{% endblock %} {% block
+content %}
+<form method="POST" novalidate>
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="card col-11 col-sm-10 col-md-8 col-lg-6 mt-4">
+      <div class="card-header">
+        <strong>Inicio de sesión de usuario</strong>
+      </div>
+      <div class="card-body">
+        {{ form.hidden_tag() }}
+
+        <!-- Email field -->
+        <div class="mb-3">
+          {{ form.email.label(class="form-label") }} {{
+          form.email(class="form-control", placeholder="Entra tu email") }}
+        </div>
+
+        <!-- Password field -->
+        <div class="mb-3">
+          {{ form.password.label(class="form-label") }} {{
+          form.password(class="form-control", placeholder="Entra tu password")
+          }}
+        </div>
+      </div>
+
+      <!-- Submit button -->
+      <div class="card-footer">{{ form.submit(class="btn btn-primary") }}</div>
+
+      <!-- Optional: Link to register -->
+    </div>
+  </div>
+  <p class="pt-2 text-center">
+    ¿No tienes una cuenta?
+    <a href="{{ url_for('auth.register') }}">Regístrate aquí</a>.
+  </p>
+</form>
+{% endblock %}

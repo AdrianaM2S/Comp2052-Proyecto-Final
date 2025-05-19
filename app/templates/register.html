@@ -1,0 +1,50 @@
+{% extends "layout.html" %} {% block title %}Register{% endblock %} {% block
+content %}
+
+<form method="POST" novalidate>
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="card col-11 col-sm-10 col-md-8 col-lg-6 mt-3">
+      <div class="card-header">
+        <strong>Registro de usuario</strong>
+      </div>
+      <div class="card-body">
+        {{ form.hidden_tag() }}
+
+        <div class="mb-3">
+          {{ form.username.label(class="form-label") }} {{
+          form.username(class="form-control", placeholder="Entra tu username")
+          }}
+        </div>
+
+        <div class="mb-3">
+          {{ form.email.label(class="form-label") }} {{
+          form.email(class="form-control", placeholder="Entra tu email") }}
+        </div>
+
+        <div class="mb-3">
+          {{ form.password.label(class="form-label") }} {{
+          form.password(class="form-control", placeholder="Entra tu password")
+          }}
+        </div>
+
+        <div class="mb-3">
+          {{ form.confirm_password.label(class="form-label") }} {{
+          form.confirm_password(class="form-control", placeholder="Confirma tu password") }}
+        </div>
+
+        <!-- New: Select Role -->
+        <div class="mb-3">
+          {{ form.role.label(class="form-label") }} {{
+          form.role(class="form-select") }}
+        </div>
+      </div>
+      <div class="card-footer">{{ form.submit(class="btn btn-success") }}</div>
+    </div>
+  </div>
+  <p class="pt-2 text-center">
+  ¿Ya tienes una cuenta?
+    <a href="{{ url_for('auth.login') }}">Inicie sesión aquí</a>.
+  </p>
+</form>
+
+{% endblock %}

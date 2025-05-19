@@ -1,0 +1,11 @@
+{% extends "layout.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<div class="text-center">
+  <h1 class="mt-5">Bienvenido al Administrador de Libros</h1>
+  {% if current_user.id %}
+  <p class="lead text-muted">Seleccione la opción "Dashboard" para ver los datos.</p>
+  {% else %}
+  <p class="lead text-body-secondary">Inicie sesión o regístrese para continuar.</p>
+  {% endif %}
+</div>
+{% endblock %}

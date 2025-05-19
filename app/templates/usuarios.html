@@ -1,0 +1,23 @@
+{% extends "layout.html" %} {% block title %}User List{% endblock %} {% block
+content %}
+<h3 class="mb-4">Lista de usuarios registrados</h3>
+
+<table class="table table-striped table-hover">
+  <thead class="table-light">
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for usuario in usuarios %}
+    <tr>
+      <td>{{ usuario.username }}</td>
+      <td>{{ usuario.email }}</td>
+      <td>{{ usuario.role.name }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

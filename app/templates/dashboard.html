@@ -1,0 +1,75 @@
+{% extends "layout.html" %} {% block title %}Dashboard{% endblock %} {% block
+content %}
+<div class="row">
+  <div class="col">
+    <h3>Gestión de Libro</h3>
+  </div>
+  <div class="col text-end">
+    {% if current_user.role.name != 'Lector' %}
+    <a class="btn btn-primary mb-3 me-2" href="{{ url_for('main.libros') }}">
+      <i class="bi bi-plus"></i> New
+    </a>
+    {% endif %}
+  </div>
+</div>
+
+<table class="table table-bordered table-hover">
+  <thead class="table-light">
+    <tr>
+      <th>Título</th>
+      <th>Autor</th>
+      <th>ISBN</th>
+      <th>Año de Publicación</th>      
+      <th>Categoría</th>  
+      <th>Estado</th>
+      <th>ID del Bibliotecario</th>
+      <th class="text-center">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for Libro in libro  %}
+    <tr>
+      <td>{{ Libro.titulo }}</td>
+      <td>{{ Libro.autor }}</td>
+      <td>{{ Libro.isbn }}</td>
+      <td>{{ Libro.anio_publicacion }}</td>      
+      <td>{{ Libro.categoria }}</td>
+      <td>{{ Libro.estado}}</td>
+      <td>{{ Libro.bibliotecario_id}}</td>
+      <td class="text-center ps-0 pe-0">
+        {% if current_user.role.name == 'Admin' or Libro.bibliotecario_id == current_user.id %}
+
+        <a
+          class="btn btn-sm btn-warning"
+          href="{{ url_for('main.editar_libro', id=Libro.id) }}"
+          title="Edit Libro"
+        >
+          <i class="bi bi-pencil"></i>
+        </a>
+        <form
+          method="POST"
+          action="{{ url_for('main.eliminar_libro', id=Libro.id) }}"
+          style="display: inline"
+          onsubmit="return confirm('¿Estas seguro que quieres borrar este libro?');"
+        >
+          <button
+            type="submit"
+            class="btn btn-sm btn-danger"
+            title="Borra Libro"
+          >
+            <i class="bi bi-trash"></i>
+          </button>
+        </form>
+        {% else %}
+        <span class="text-muted"><i class="bi bi-lock"></i></span>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% if current_user.role.name == 'Lector' %}
+<p class="text-center pe-3 mt-0 text-body-tertiary fw-lighter fst-italic">
+  No tienes el permiso para crear, actualizar o borrar libros.
+</p>
+{% endif %} {% endblock %}
