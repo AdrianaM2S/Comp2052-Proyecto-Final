@@ -1,0 +1,4 @@
+### Obtener todos los libros del la base de datos (GET)
+
+GET http://localhost:5000/libro
+Content-Type: application/json

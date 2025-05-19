@@ -1,0 +1,4 @@
+### Obtener los libros por ID (GET)
+
+GET http://localhost:5000/libro/4
+Content-Type: application/json

@@ -1,0 +1,3 @@
+### Eliminar libro (POST)
+
+DELETE http://localhost:5000/libro/4

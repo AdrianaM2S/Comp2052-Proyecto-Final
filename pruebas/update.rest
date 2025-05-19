@@ -1,0 +1,16 @@
+### Editar un libro (POST)
+
+# Simular POST con nuevos datos del libro
+
+PUT http://localhost:5000/libro/3
+Content-Type: application/json
+
+{
+  "titulo": "Frankenstein",
+  "autor": "Mary Shelly",
+  "isbn": "123455-23",
+  "categoria": "Horror, Gothic, Novela",
+  "estado": "Prestado",
+  "anio_publicacion": "1915",
+  "bibliotecario_id": 1
+}
