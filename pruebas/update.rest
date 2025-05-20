@@ -2,7 +2,7 @@
 
 # Simular POST con nuevos datos del libro
 
-PUT http://localhost:5000/libro/3
+PUT http://localhost:5000/libro/5
 Content-Type: application/json
 
 {
