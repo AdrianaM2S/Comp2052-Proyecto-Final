@@ -33,6 +33,13 @@ A continuación, las imagenes de las interfaces de front-end del proyecto:
 ---
 
 <figure class="image"> 
+   <figcaption>Home Page / Dashboard </figcaption>
+   <img src="images/prinsipal.png" alt="Dashboard(principal)">
+</figure>
+
+---
+
+<figure class="image"> 
    <figcaption>Home Page / Dashboard (Bibliotecario) </figcaption>
    <img src="images/biblitecario-view.png" alt="Dashboard(bibliotecario)">
 </figure>
