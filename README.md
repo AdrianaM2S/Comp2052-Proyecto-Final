@@ -124,6 +124,9 @@ A continuación, las imagenes de las interfaces de front-end del proyecto:
 | `README.md`                                                       | Este archivo de documentación del proyecto                                 |
 | `requirements.txt`                                                | Lista de paquetes Python requeridos                                        |
 | **`run.py`**                                                      | Punto de entrada para ejecutar el servidor Flask                           |
+
+
+
 | `app/__init__.py`                                                 | Inicializa la aplicación Flask y carga la configuración                    |
 | `app/models.py`                                                   | Contiene los modelos SQLAlchemy: User, Role, Libro                         |
 | `app/forms.py`                                                    | Formularios de Flask-WTF usados en login, registro, libro, contraseñas     |
