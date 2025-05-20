@@ -1,0 +1,4 @@
+### Obtener la pagina de inicio (GET)
+
+GET http://localhost:5000/
+Content-Type: application/json
