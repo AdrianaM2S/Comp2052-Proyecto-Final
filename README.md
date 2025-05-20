@@ -124,9 +124,12 @@ A continuación, las imagenes de las interfaces de front-end del proyecto:
 | `README.md`                                                       | Este archivo de documentación del proyecto                                 |
 | `requirements.txt`                                                | Lista de paquetes Python requeridos                                        |
 | **`run.py`**                                                      | Punto de entrada para ejecutar el servidor Flask                           |
-
-
-
+| `pruebas/index.rest`                                              | Prueba la ruta pricipal del proyecto                                       |
+| `pruebas/read.rest`                                               | Prueba para leer todos los libros de la base de datos                      |
+| `pruebas/create.rest`                                             | Prueba la creación de libros en la base de datos                           |
+| `pruebas/read-a-row.rest`                                         | Prueba la lectura de un libro en base a su ID                              |
+| `pruebas/update.rest`                                             | Prueba para actualizar un libro en base a su ID                            |
+| `pruebas/delete.rest`                                             | Prueba para la eleminación de un libro en base de datos                    |
 | `app/__init__.py`                                                 | Inicializa la aplicación Flask y carga la configuración                    |
 | `app/models.py`                                                   | Contiene los modelos SQLAlchemy: User, Role, Libro                         |
 | `app/forms.py`                                                    | Formularios de Flask-WTF usados en login, registro, libro, contraseñas     |
