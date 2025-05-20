@@ -4,6 +4,15 @@ Este proyecto permite gestionar los libros de una Biblioteca donde **Bibliotecar
 
 A continuación, las imagenes de las interfaces de front-end del proyecto:
 
+---
+
+<figure class="image"> 
+   <figcaption>Home Page / Dashboard </figcaption>
+   <img src="images/prinsipal.png" alt="Dashboard(principal)">
+</figure>
+
+---
+
 <figure class="image">
    <figcaption>Login Page</figcaption>
    <img src="images/login.png" alt="Login Form">
@@ -28,13 +37,6 @@ A continuación, las imagenes de las interfaces de front-end del proyecto:
 <figure class="image">
    <figcaption>Password Changed Paged </figcaption>
    <img src="images/autualizando password.png" alt="Changed password">
-</figure>
-
----
-
-<figure class="image"> 
-   <figcaption>Home Page / Dashboard </figcaption>
-   <img src="images/prinsipal.png" alt="Dashboard(principal)">
 </figure>
 
 ---
